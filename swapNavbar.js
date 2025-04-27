@@ -1,5 +1,5 @@
 (function() {
-  // Check if we've already swapped in this session
+  // Check for already swapped in this session
   if (sessionStorage.getItem('menuSwapped') === 'true') {
     console.log('%cMenu already swapped in this session', 'color: blue');
     return "Menu already swapped in this session";
@@ -29,7 +29,7 @@
     }
     
     try {
-      // Store the original href values
+     
       const referenceHref = referenceLink.href;
       const communityHref = communityLink.href;
       
@@ -45,7 +45,7 @@
       referenceLink.href = communityHref;
       communityLink.href = referenceHref;
       
-      // Mark as swapped in session storage
+     
       sessionStorage.setItem('menuSwapped', 'true');
       
       console.log('%cMenu swap completed successfully', 'color: green; font-weight: bold');
